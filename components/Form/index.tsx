@@ -2,22 +2,28 @@ import { useEffect, useState } from "react";
 import { ButtonSubmit, FormContainer, Input, Label, TextArea } from "../../src/assets/UI";
 
 
-export default function Form({setItems}) {
+export default function Form({setItems, items}) {
   const [toDo, setToDo] = useState({ category: "", task: "", commentary: "" });
   const url: string = "api/tasklist";
-  
-  useEffect(()=>{
 
+
+  useEffect(()=>{
     const currentList = JSON.parse(window.localStorage.getItem('DoiT')) || [];
 
     fetch(url, {
-        method: "POST",
-        body: JSON.stringify({
-            currentList
-        }),
-      });
+      method: "POST",
+      body: JSON.stringify({
+        currentList,
+      }),
+    });
 
-  }, [])
+
+    fetch(url).then(res => res.json()).then(data => setItems(data[data.length -1].currentList))
+
+    
+
+  }, [items.length > 0] )
+
 
   function createCategory(e) {
     setToDo({ ...toDo, category: e.target.value });
@@ -33,24 +39,26 @@ export default function Form({setItems}) {
   function createToDo(e) {
     e.preventDefault();
    
+ 
+
+    const currentList = JSON.parse(window.localStorage.getItem('DoiT')) || [];
+    currentList.push(toDo)
+
+    window.localStorage.setItem('DoiT', JSON.stringify(currentList))
+
     fetch(url, {
       method: "POST",
       body: JSON.stringify({
-        category: toDo.category,
-        task: toDo.task,
-        commentary: toDo.commentary,
+        currentList,
       }),
     });
 
-    window.localStorage.setItem('DoiT', JSON.stringify(toDo))
+
 
     setToDo({ ...toDo, category: '', task: '', commentary: ''  });
 
 
-    
-        fetch(url)
-          .then((res) => res.json())
-          .then((data) => setItems(data));
+     setItems(currentList);
  
   }
 

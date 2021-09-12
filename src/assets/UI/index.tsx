@@ -92,12 +92,12 @@ export const Table = styled.table`
 export const Tr = styled.tr `
 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 0.5rem;
     width: 100%;
     border-bottom: 1px solid darkblue;
-
+ 
 `
 
 export const Td = styled.td `

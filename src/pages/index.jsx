@@ -23,7 +23,7 @@ export default function Home() {
   const [items, setItems] = useState([]);
 
 
-console.log(items)
+
 
   return (
     <div>
@@ -34,7 +34,7 @@ console.log(items)
       </Head>
         <Main>
             <Title>Do It</Title>
-            <Form setItems={setItems} />
+            <Form setItems={setItems} items={items} />
             <List items={items} />
         </Main>
 
