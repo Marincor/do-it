@@ -3,7 +3,7 @@ import { ButtonSubmit, FormContainer, Input, Label, TextArea } from "../../src/a
 
 
 export default function Form({setItems, items}) {
-  const [toDo, setToDo] = useState({ category: "", task: "", commentary: "" });
+  const [toDo, setToDo] = useState({ category: "", task: "", commentary: "", id: 0 });
   const url: string = "api/tasklist";
 
 
@@ -25,8 +25,9 @@ export default function Form({setItems, items}) {
   }, [items.length > 0] )
 
 
+
   function createCategory(e) {
-    setToDo({ ...toDo, category: e.target.value });
+    setToDo({ ...toDo, category: e.target.value, id: Math.round(Math.random()*15685) });
   }
   function createTask(e) {
     setToDo({ ...toDo, task: e.target.value });

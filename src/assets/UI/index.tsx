@@ -87,6 +87,12 @@ export const Table = styled.table`
    justify-content: center;
    border-radius: 1rem;
 
+   .done {
+
+      text-decoration:line-through;
+      color:rgb(174, 10, 13) ;
+   }
+
 `
 
 export const Tr = styled.tr `
@@ -106,4 +112,12 @@ export const Td = styled.td `
     padding: 2rem;
     font-family: sans-serif;
     font-size: 1rem;
+`
+
+export const BoxList  = styled.div `
+
+   display: flex;
+   flex-direction: column;
+   height: auto;
+   width: auto;
 `
