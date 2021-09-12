@@ -1,5 +1,6 @@
 export default function deleteOnClick(e) {
-    const currentTr = e.target.previousSibling.previousSibling;
+  
+    const currentTr = e.target.parentElement.previousSibling;
     const currentDoneButton = e.target;
     const currentDeleteButton = e.target.previousSibling;
 

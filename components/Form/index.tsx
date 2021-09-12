@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ButtonSubmit, FormContainer, Input, Label, TextArea } from "../../src/assets/UI";
+import { requestApiGet, requestApiPost } from "../functions/request";
 
 
 export default function Form({setItems, items}) {
@@ -10,17 +11,11 @@ export default function Form({setItems, items}) {
   useEffect(()=>{
     const currentList = JSON.parse(window.localStorage.getItem('DoiT')) || [];
 
-    fetch(url, {
-      method: "POST",
-      body: JSON.stringify({
-        currentList,
-      }),
-    });
-
-
-    fetch(url).then(res => res.json()).then(data => setItems(data[data.length -1].currentList))
-
     
+    requestApiGet(url, setItems)
+
+    requestApiPost(url, currentList)
+ 
 
   }, [items.length > 0] )
 

@@ -118,6 +118,42 @@ export const BoxList  = styled.div `
 
    display: flex;
    flex-direction: column;
+   justify-content: center;
+   align-items: center;
    height: auto;
    width: auto;
+`
+
+export const BoxButtons = styled.div `
+
+   display: flex;
+`
+export const ButtonFeatures = styled.button `
+
+cursor: pointer;
+   width: auto;
+   height: auto;
+   border-radius: 2rem;
+   background-color: transparent;
+   padding:1rem;
+   margin: 1rem;
+
+  :nth-child(1) {
+
+      :hover {
+
+          background-color: darkblue;
+          color: white;
+      }
+  }
+
+  :nth-child(2) {
+
+    :hover {
+
+      background-color: rgb(174, 10, 13);
+          color: white;
+    }
+  }
+
 `

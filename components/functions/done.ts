@@ -18,7 +18,9 @@ export  function doneOnRender(atribute) {
 
 
   export  function doneOnClick(e) {
-    const currentTr = e.target.previousSibling;
+    const currentTr = e.target.parentElement.previousSibling;
+
+
 
 
     if (currentTr.classList.contains("done")) {
