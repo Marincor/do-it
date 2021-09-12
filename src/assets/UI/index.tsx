@@ -61,3 +61,49 @@ cursor: pointer;
 }
 
 `
+
+
+export const FormContainer = styled.form`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+`;
+
+
+
+export const Table = styled.table`
+
+
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   background-color: rgba(250,255,255);
+   width: 50vw;
+   height: auto;
+   justify-content: center;
+   border-radius: 1rem;
+
+`
+
+export const Tr = styled.tr `
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    border-bottom: 1px solid darkblue;
+
+`
+
+export const Td = styled.td `
+
+
+    padding: 2rem;
+    font-family: sans-serif;
+    font-size: 1rem;
+`

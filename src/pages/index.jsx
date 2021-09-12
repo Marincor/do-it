@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Form from '../../components/Form/'
 import { Title } from '../assets/UI'
 import styled from 'styled-components'
+import List from '../../components/List'
+import { useEffect, useState } from 'react'
 
 const Main = styled.main `
 
@@ -10,11 +12,19 @@ const Main = styled.main `
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 
 `
 
 
 export default function Home() {
+
+
+  const [items, setItems] = useState([]);
+
+
+console.log(items)
+
   return (
     <div>
       <Head>
@@ -24,8 +34,8 @@ export default function Home() {
       </Head>
         <Main>
             <Title>Do It</Title>
-            <Form />
-
+            <Form setItems={setItems} />
+            <List items={items} />
         </Main>
 
     </div>
