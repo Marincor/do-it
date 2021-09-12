@@ -55,10 +55,19 @@ border-radius: 1rem;
 padding: 0.2rem;
 cursor: pointer;
 
+
+:hover {
+
+background-color: darkblue;
+color: black;
+}
+
 :active {
 
     background-color: rgb(174, 10, 13);
 }
+
+
 
 `
 
@@ -81,8 +90,8 @@ export const Table = styled.table`
     display: flex;
     flex-direction: column;
     align-items: center;
-   background-color: rgba(250,255,255);
-   width: 50vw;
+   background-color: transparent;
+   width: auto;
    height: auto;
    justify-content: center;
    border-radius: 1rem;
@@ -91,6 +100,7 @@ export const Table = styled.table`
 
       text-decoration:line-through;
       color:rgb(174, 10, 13) ;
+      font-style: italic;
    }
 
 `
@@ -98,10 +108,11 @@ export const Table = styled.table`
 export const Tr = styled.tr `
 
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: ellipsis;
     margin-bottom: 0.5rem;
-    width: 100%;
+    width: 80rem;
+    height: auto;
     border-bottom: 1px solid darkblue;
  
 `
@@ -112,6 +123,7 @@ export const Td = styled.td `
     padding: 2rem;
     font-family: sans-serif;
     font-size: 1rem;
+    color: white;
 `
 
 export const BoxList  = styled.div `
@@ -134,7 +146,7 @@ cursor: pointer;
    width: auto;
    height: auto;
    border-radius: 2rem;
-   background-color: transparent;
+   background-color: lightgray;
    padding:1rem;
    margin: 1rem;
 

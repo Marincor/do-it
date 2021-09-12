@@ -87,6 +87,7 @@ export default function Form({setItems, items}) {
       <Label htmlFor="commentary">
         Commentary
         <TextArea
+        placeholder='write something about it'
           id="commentary"
           cols={50}
           rows={5}

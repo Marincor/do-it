@@ -8,7 +8,7 @@ export async function requestApiGet (url, func) {
    await fetch(url).then(res => res.json()).then(data => 
       
       
-    func( data[data.length -1].array) )
+    func( data[data.length -1].array) || [] )
     
 
 

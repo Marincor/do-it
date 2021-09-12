@@ -14,3 +14,35 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.day {
+
+  background-image: url("../../public//img/day.webp");
+  background-repeat: no-repeat;
+  background-color: rgba(223, 207, 207, 0.3);
+  background-blend-mode: color;
+  background-size: cover;
+}
+
+.afternoon {
+
+
+  background-image: url("../../public//img/afternoom.gif");
+  background-repeat: no-repeat;
+  background-color: rgba(223, 207, 207, 0.6);
+  background-blend-mode: color;
+  background-size: cover;
+
+}
+
+
+.night {
+
+
+  background-image: url("../../public//img/night.gif");
+  background-repeat: no-repeat;
+  background-color: rgba(223, 207, 207, 0.3);
+  background-blend-mode: color;
+  background-size: cover;
+
+}
