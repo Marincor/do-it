@@ -34,7 +34,7 @@ export default function Home() {
   const day  = date.getDate()
   const month = date.getUTCMonth() +1;
   const year = date.getUTCFullYear();
-  console.log(year)
+
 
 const [period, setPeriod] = useState('');
   const [items, setItems] = useState([]);
@@ -71,7 +71,7 @@ useEffect(()=>{
       <Main className={period}  >
 
        <Title>Do It</Title>
-       <h3>{hour}h{min} - {day}/{month}/{year}</h3>
+       <h3 className='dateHour'>{hour}h{min} - {day}/{month}/{year}</h3>
        <Form setItems={setItems} items={items} />
        <List items={items} />
   

@@ -1,28 +1,40 @@
 import { useEffect, useState } from "react";
-import { ButtonSubmit, FormContainer, Input, Label, TextArea } from "../../src/assets/UI";
+import {
+  ButtonSubmit,
+  FormContainer,
+  Input,
+  Label,
+  TextArea,
+} from "../../src/assets/UI";
 import { requestApiGet, requestApiPost } from "../functions/request";
 
-
-export default function Form({setItems, items}) {
-  const [toDo, setToDo] = useState({ category: "", task: "", commentary: "", id: 0 });
+export default function Form({ setItems, items }) {
+  const [toDo, setToDo] = useState({
+    category: "",
+    task: "",
+    commentary: "",
+    id: 0,
+  });
   const url: string = "api/tasklist";
 
+  useEffect(() => {
+    const currentList = JSON.parse(window.localStorage.getItem("DoiT")) || [];
 
-  useEffect(()=>{
-    const currentList = JSON.parse(window.localStorage.getItem('DoiT')) || [];
+    requestApiGet(url).then((data) => {
+      const arr: any = data.arrTasks.array;
 
-    
-    requestApiGet(url, setItems)
+      setItems(arr);
+    });
 
-    requestApiPost(url, currentList)
- 
-
-  }, [items.length > 0] )
-
-
+    requestApiPost(url, currentList);
+  }, [items !== undefined]);
 
   function createCategory(e) {
-    setToDo({ ...toDo, category: e.target.value, id: Math.round(Math.random()*15685) });
+    setToDo({
+      ...toDo,
+      category: e.target.value,
+      id: Math.round(Math.random() * 15685),
+    });
   }
   function createTask(e) {
     setToDo({ ...toDo, task: e.target.value });
@@ -34,13 +46,11 @@ export default function Form({setItems, items}) {
 
   function createToDo(e) {
     e.preventDefault();
-   
- 
 
-    const currentList = JSON.parse(window.localStorage.getItem('DoiT')) || [];
-    currentList.push(toDo)
+    const currentList = JSON.parse(window.localStorage.getItem("DoiT")) || [];
+    currentList.push(toDo);
 
-    window.localStorage.setItem('DoiT', JSON.stringify(currentList))
+    window.localStorage.setItem("DoiT", JSON.stringify(currentList));
 
     fetch(url, {
       method: "POST",
@@ -49,13 +59,9 @@ export default function Form({setItems, items}) {
       }),
     });
 
+    setToDo({ ...toDo, category: "", task: "", commentary: "" });
 
-
-    setToDo({ ...toDo, category: '', task: '', commentary: ''  });
-
-
-     setItems(currentList);
- 
+    setItems(currentList);
   }
 
   return (
@@ -87,7 +93,7 @@ export default function Form({setItems, items}) {
       <Label htmlFor="commentary">
         Commentary
         <TextArea
-        placeholder='write something about it'
+          placeholder="write something about it"
           id="commentary"
           cols={50}
           rows={5}

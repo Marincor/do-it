@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 html,
 body {
   padding: 0;
@@ -17,7 +19,7 @@ a {
 
 .day {
 
-  background-image: url("../../public//img/day.webp");
+  background-image: url("../../public//img/day.gif");
   background-repeat: no-repeat;
   background-color: rgba(223, 207, 207, 0.3);
   background-blend-mode: color;
@@ -27,7 +29,7 @@ a {
 .afternoon {
 
 
-  background-image: url("../../public//img/afternoom.gif");
+  background-image: url("../../public//img/afternoon.gif");
   background-repeat: no-repeat;
   background-color: rgba(223, 207, 207, 0.6);
   background-blend-mode: color;
@@ -44,5 +46,12 @@ a {
   background-color: rgba(223, 207, 207, 0.3);
   background-blend-mode: color;
   background-size: cover;
+
+}
+
+.dateHour {
+
+  font-family: 'VT323', monospace;
+  font-size: 1.5rem;
 
 }

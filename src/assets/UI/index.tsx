@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const Label = styled.label`
   display: flex;
   flex-direction: column;
@@ -15,7 +16,7 @@ export const Title = styled.h1`
   font-size: 4rem;
   color: rgb(174, 10, 13);
 
- 
+
 `;
 
 export const Input = styled.input`
@@ -79,6 +80,11 @@ export const FormContainer = styled.form`
   align-items: center;
   width: 100vw;
   height: auto;
+
+  @media screen and (max-width: 767px) {
+
+    width: 50vw;
+  }
 `;
 
 
@@ -98,9 +104,18 @@ export const Table = styled.table`
 
    .done {
 
+     
       text-decoration:line-through;
       color:rgb(174, 10, 13) ;
       font-style: italic;
+      background-color: #d853531c;
+   }
+
+
+   @media screen and (max-width: 767px) {
+
+
+    padding: 10rem;
    }
 
 `

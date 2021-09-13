@@ -2,13 +2,16 @@
 
 
 export  function doneOnRender(atribute) {
-    if (atribute != null) {
+
+    if (atribute !== null) {
         atribute.forEach((item) => {
         const currentTr = document.getElementById(item);
-
+      
 
         if (currentTr) {
           currentTr.classList.add("done");
+
+       
         }
       });
     }
@@ -24,6 +27,8 @@ export  function doneOnRender(atribute) {
 
 
     if (currentTr.classList.contains("done")) {
+
+      console.log('primeiro click')
       const vetorDone = JSON.parse(localStorage.getItem("Done"));
 
       const index = vetorDone.indexOf(currentTr.id);
