@@ -18,16 +18,8 @@ export default function Form({ setItems, items }) {
   const url: string = "api/tasklist";
 
   useEffect(() => {
-    const currentList = JSON.parse(window.localStorage.getItem("DoiT")) || [];
-
-    requestApiGet(url).then((data) => {
-      const arr: any = data.arrTasks.array;
-
-      setItems(arr);
-    });
-
-    requestApiPost(url, currentList);
-  }, [items !== undefined]);
+    requestApiGet(url).then((data) => setItems(data));
+  }, [items.length > 0]);
 
   function createCategory(e) {
     setToDo({
@@ -44,24 +36,28 @@ export default function Form({ setItems, items }) {
     setToDo({ ...toDo, commentary: e.target.value });
   }
 
-  function createToDo(e) {
+  async function createToDo(e) {
     e.preventDefault();
 
-    const currentList = JSON.parse(window.localStorage.getItem("DoiT")) || [];
-    currentList.push(toDo);
+    const id = Math.round(Math.random() * 154587);
 
-    window.localStorage.setItem("DoiT", JSON.stringify(currentList));
-
-    fetch(url, {
+    await fetch(url, {
       method: "POST",
+
       body: JSON.stringify({
-        currentList,
+        category: toDo.category,
+        task: toDo.task,
+        commentary: toDo.commentary,
+        id: id,
       }),
     });
 
     setToDo({ ...toDo, category: "", task: "", commentary: "" });
 
-    setItems(currentList);
+    const res = await fetch(url);
+    const task = await res.json();
+
+    setItems(task);
   }
 
   return (

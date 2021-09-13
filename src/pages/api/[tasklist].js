@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 
-let arrTasks = null;
+let arrTasks = [];
 
 export default function handler(req, res) {
 
@@ -15,6 +15,10 @@ export default function handler(req, res) {
 
 
     post(req, res)
+  } else {
+
+
+    del(req, res)
   }
 
 
@@ -29,13 +33,13 @@ export default function handler(req, res) {
 
 function get(req, res) {
 
+  
 
-res.status(200).json({
-
+res.status(200).json(
 
   arrTasks
 
-})
+)
 
 
 }
@@ -43,6 +47,15 @@ res.status(200).json({
 function post(req, res) {
 
   const currentData = JSON.parse(req.body);
+  arrTasks.push( currentData);
+  res.status(200).send();
+}
+
+function del (req, res) {
+
+
+  const currentData = JSON.parse(req.body);
   arrTasks = currentData;
   res.status(200).send();
+
 }

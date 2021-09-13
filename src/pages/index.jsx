@@ -73,7 +73,7 @@ useEffect(()=>{
        <Title>Do It</Title>
        <h3 className='dateHour'>{hour}h{min} - {day}/{month}/{year}</h3>
        <Form setItems={setItems} items={items} />
-       <List items={items} />
+       <List items={items} setItems={setItems} />
   
    </Main> 
    
