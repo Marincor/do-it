@@ -10,14 +10,20 @@ import Day from '../../public/img/day.gif'
 
 const Main = styled.main `
 
-
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-
+  width: 100vw;
+  height: auto;
  
+  @media screen and (min-width: 768px) {
+
+    height: auto;
+    padding-bottom: 10rem;
+  }
 
   
 
