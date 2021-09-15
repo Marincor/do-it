@@ -1,34 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Do iT
+![doiT](https://user-images.githubusercontent.com/84210050/133175270-d50ea5d4-87e1-4a7f-85f6-2ba5fa6eafd4.png)
 
-## Getting Started
+![doit tour](https://user-images.githubusercontent.com/84210050/133175285-be322d25-5374-44ae-b692-9bee1068ee69.gif)
 
-First, run the development server:
+# Responsividade:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+![doit responsivity](https://user-images.githubusercontent.com/84210050/133175603-aa25dcbf-8e98-4b5a-8682-23ef24e4d574.gif)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Aplicação:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+https://do-it-murex.vercel.app/
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+# Sobre:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Lista de tarefas com conceito visual vaporWave. Foi criado uma api utilizando o serviço do próprio Next Js, fazendo requisições de get,post e delete para as funcionalidades apresentadas.
 
-## Learn More
+> 1° digite o nome da categoria;
+> 
+> 2° digite o nome da tarefa;
+> 
+> 3° acrescente um comentário sobre a tarefa se necessário;
+> 
+> 4° feedbacks são bem vindos :)
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Funcionalidades:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- inclusão de tarefas;
+- marcar tarefas concluídas;
+- deletar tarefas;
+- hora e data atual ao renderizar;
+- background dinâmico (mudança de acordo com período do dia - manhã, tarde e noite).
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Tecnologias usadas:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+> Base:
+
+ <img  width='50px'  src='https://user-images.githubusercontent.com/84210050/132043336-d48a162f-c7f0-42a2-825d-96d0d3cf1998.png' alt='html5-logo' /> <img  width='50px'  src='https://user-images.githubusercontent.com/84210050/132043720-b43a7f9f-a5d3-4f31-99d8-28405783bd6b.png' alt='css3-logo' /> <img  width='50px'  src='https://user-images.githubusercontent.com/84210050/132044177-7af14c69-0ade-4d2b-83dc-922a408962a5.png' alt='javascript-logo' /> <img  width='42px'  src='https://upload.vectorlogo.zone/logos/typescriptlang/images/d166fafc-3264-4f1d-80f1-4c55b4aa6473.svg' alt='typescript-logo' />  <img  width='45px' src='https://user-images.githubusercontent.com/84210050/132927865-0c103b64-7bd3-4e26-ac5e-536d5989d4a4.png' alt='nextJS-logo'/>
+
+
+- HTML5 - CSS3 - JavaScript - TypeScript - NextJs 
+
+> Complementar:
+
+ <img  width='50px'  src='https://cdn.worldvectorlogo.com/logos/styled-components-1.svg' alt='styledComponents-logo'/>  
+ 
+- Styled Components 
