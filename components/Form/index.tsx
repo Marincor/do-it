@@ -65,6 +65,7 @@ export default function Form({ setItems, items }) {
       <Label htmlFor="category">
         Category
         <Input
+         data-cy="input-category"
           type="text"
           id="category"
           required
@@ -77,6 +78,7 @@ export default function Form({ setItems, items }) {
       <Label htmlFor="task">
         Task
         <Input
+        data-cy="input-task"
           type="text"
           id="task"
           required
@@ -89,6 +91,7 @@ export default function Form({ setItems, items }) {
       <Label htmlFor="commentary">
         Commentary
         <TextArea
+         data-cy="textArea-commentary"
           placeholder="write something about it"
           id="commentary"
           cols={50}
@@ -97,7 +100,7 @@ export default function Form({ setItems, items }) {
           onChange={createCommentary}
         ></TextArea>
       </Label>
-      <ButtonSubmit type="submit">➕</ButtonSubmit>
+      <ButtonSubmit type="submit"  data-cy="button-add">➕</ButtonSubmit>
     </FormContainer>
   );
 }

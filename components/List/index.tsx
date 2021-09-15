@@ -21,14 +21,14 @@ export default function List({ items, setItems }) {
       {items.map((item) => {
         return (
           <BoxList key={item.id} id={item.id}>
-            <Tr>
+            <Tr data-cy='tr-task'>
               <Td>{item.category}</Td>
               <Td>{item.task}</Td>
               <Td>{item.commentary}</Td>
             </Tr>
             <BoxButtons>
-              <ButtonFeatures onClick={doneOnClick}> done ✔ </ButtonFeatures>
-              <ButtonFeatures onClick={deleteOnClick}>delete x</ButtonFeatures>
+              <ButtonFeatures onClick={doneOnClick} data-cy='button-done' > done ✔ </ButtonFeatures>
+              <ButtonFeatures onClick={deleteOnClick} data-cy='button-delete'>delete x</ButtonFeatures>
             </BoxButtons>
           </BoxList>
         );
