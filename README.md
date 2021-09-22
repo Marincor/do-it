@@ -50,6 +50,11 @@ Lista de tarefas com conceito visual vaporWave. Foi criado uma api utilizando o 
  
 - Styled Components 
 
+# Testes
+
+Testes incluídos usando Cypress
+
+<img  width='50px' src='https://cdn.auth0.com/blog/cypress-tests/logo.png' alt='chartJs-logo'/> 
 
 # en - version
 
@@ -102,3 +107,9 @@ To-do list with a visual concept inspired by vaporWave. Was created using an API
  <img  width='50px'  src='https://cdn.worldvectorlogo.com/logos/styled-components-1.svg' alt='styledComponents-logo'/>  
  
 - Styled Components 
+
+# Tests
+
+Tests included using Cypress
+
+<img  width='50px' src='https://cdn.auth0.com/blog/cypress-tests/logo.png' alt='chartJs-logo'/> 
