@@ -1,5 +1,5 @@
 # <img src="https://user-images.githubusercontent.com/84210050/140749196-8d4c5f56-8879-4569-a5e4-650b328b7817.png" alt="brazil-icon" width="30px" /> pt-BR - version
-> ⮩ <a href="/"> <img src="https://user-images.githubusercontent.com/84210050/140749761-498d72d3-958c-4275-99e8-26388fd9d2b1.png" alt="eua-icon" width="30px" /> en </a>
+> ⮩ <a href="https://github.com/Marincor/do-it#-en---version"> <img src="https://user-images.githubusercontent.com/84210050/140749761-498d72d3-958c-4275-99e8-26388fd9d2b1.png" alt="eua-icon" width="30px" /> en </a>
 
 <hr/>
 
@@ -62,7 +62,7 @@ Testes incluídos usando Cypress
 
 # <img src="https://user-images.githubusercontent.com/84210050/140749761-498d72d3-958c-4275-99e8-26388fd9d2b1.png" alt="eua-icon" width="30px" /> en - version
 
-> ⮩ <a href=""><img src="https://user-images.githubusercontent.com/84210050/140749196-8d4c5f56-8879-4569-a5e4-650b328b7817.png" alt="brazil-icon" width="30px" /> pt-BR </a>
+> ⮩ <a href="https://github.com/Marincor/do-it#-pt-br---version"><img src="https://user-images.githubusercontent.com/84210050/140749196-8d4c5f56-8879-4569-a5e4-650b328b7817.png" alt="brazil-icon" width="30px" /> pt-BR </a>
 
 <hr/>
 
